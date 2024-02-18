@@ -66,7 +66,7 @@ div.searchBox div.icon {
 
 div.siteIcon {
     border-radius: 50% 0 0 50%;
-    background-image: url(/static/image/必应.png);
+    background-image: url(../image/必应.png);
     background-repeat: no-repeat;
     background-position: center;
     background-position-x: 13px;
@@ -75,7 +75,7 @@ div.siteIcon {
 
 div.searchIcon {
     border-radius: 0 50% 50% 0;
-    background-image: url(/static/image/搜索.png);
+    background-image: url(../image/搜索.png);
     background-repeat: no-repeat;
     background-position: center;
     background-position-x: 11px;
