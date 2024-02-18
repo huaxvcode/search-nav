@@ -15,7 +15,7 @@
         /* 使得子元素在交叉轴上对齐 */
         /* align-items: center; */
     
-        background-image: url(/static/image/丛雨壁纸.png);
+        background-image: url(../image/丛雨壁纸.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -41,7 +41,7 @@
         /* 使得子元素在交叉轴上对齐 */
         align-items: center;
     
-        background-image: url(/static/image/丛雨small.png);
+        background-image: url(../image/丛雨small.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
