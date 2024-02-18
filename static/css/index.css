@@ -3,22 +3,44 @@
     margin: 0;
 }
 
-div.body {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    /* 使得子元素在主轴上对齐 */
-    justify-content: center;
-
-    /* 使得子元素在交叉轴上对齐 */
-    /* align-items: center; */
-
-    background-image: url(../image/丛雨壁纸.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+@media (min-width: 1000px) {
+    div.body {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        /* 使得子元素在主轴上对齐 */
+        justify-content: center;
+    
+        /* 使得子元素在交叉轴上对齐 */
+        /* align-items: center; */
+    
+        background-image: url(/static/image/丛雨壁纸.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 }
+@media (max-width: 1000px) {
+    div.body {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        /* 使得子元素在主轴上对齐 */
+        justify-content: center;
+    
+        /* 使得子元素在交叉轴上对齐 */
+        /* align-items: center; */
+    
+        background-image: url(/static/image/丛雨small.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+
 
 div.searchBox {
     position: relative;
@@ -40,7 +62,7 @@ div.searchBox div.icon {
 
 div.siteIcon {
     border-radius: 50% 0 0 50%;
-    background-image: url(../image/必应.png);
+    background-image: url(/static/image/必应.png);
     background-repeat: no-repeat;
     background-position: center;
     background-position-x: 13px;
@@ -49,7 +71,7 @@ div.siteIcon {
 
 div.searchIcon {
     border-radius: 0 50% 50% 0;
-    background-image: url(../image/搜索.png);
+    background-image: url(/static/image/搜索.png);
     background-repeat: no-repeat;
     background-position: center;
     background-position-x: 11px;
