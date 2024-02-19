@@ -7,6 +7,8 @@ let textInputEnable = function() {
     elem.setAttribute("outline", "none");
 }
 
+let searchHead = "https://cn.bing.com/search?q=";
+
 let search = function(s) {
     let qs = "";
     // 将所有的空格都用 %20 替换
@@ -15,7 +17,7 @@ let search = function(s) {
             qs += "%20";
         else qs += s[i];
     }
-    window.open("https://cn.bing.com/search?q=" + qs);
+    window.open(searchHead + qs);
 }
 
 let enterToSearch = function() {
@@ -70,25 +72,91 @@ let bgcChange = function() {
 
 let clickCnt = 0;
 
+let siteMainDisappear = () => {
+    console.log("clickCnt = " + clickCnt);
+    let elem = document.querySelector("div.main");
+    if (clickCnt % 2 === 0) {
+        elem.setAttribute("style", "height: 0px;");
+    }
+    else {
+        elem.setAttribute("style", "height: 160px;");
+    }
+};
+
 let siteMain = function() {
     let elem = document.querySelector("div.siteIcon");
     elem.addEventListener("click", (e) => {
         clickCnt ++;
-        console.log("clickCnt = " + clickCnt);
-        let elem = document.querySelector("div.main");
-        if (clickCnt % 2 === 1) {
-            elem.setAttribute("style", "height: 0px;");
-        }
-        else {
-            elem.setAttribute("style", "height: 160px;");
-        }
+        siteMainDisappear();
     });
 }
+
+let google = function() {
+    let qs = "https://www.google.com/search?q=";
+    searchHead = qs;
+    let elem = document.querySelector("div.siteIcon div.img");
+    elem.style.backgroundImage = "url(./static/image/谷歌.png)";
+}
+
+let bing = function() {
+    let qs = "https://cn.bing.com/search?q=";
+    searchHead = qs;
+    let elem = document.querySelector("div.siteIcon div.img");
+    elem.style.backgroundImage = "url(./static/image/必应.png)";
+}
+
+let baidu = function() {
+    let qs = "http://www.baidu.com/s?wd=";
+    searchHead = qs;
+    let elem = document.querySelector("div.siteIcon div.img");
+    elem.style.backgroundImage = "url(./static/image/百度.png)";
+}
+
+let github = function() {
+    let url = "https://github.com/huaxvcode/search-nav/tree/main";
+    let qs = searchHead;
+    searchHead = "";
+    search(url);
+    searchHead = qs;
+}
+
+let searchSiteChoice = function() {
+    let gg = document.querySelector("div.mt1");
+    let bn = document.querySelector("div.mt2");
+    let bd = document.querySelector("div.mt3");
+    let gh = document.querySelector("div.mt4");
+    gg.addEventListener("click", (e) => {
+        google();
+        clickCnt ++;
+        siteMainDisappear();
+        console.log(searchHead);
+    });
+    bn.addEventListener("click", (e) => {
+        bing();
+        clickCnt ++;
+        siteMainDisappear();
+        console.log(searchHead);
+    });
+    bd.addEventListener("click", (e) => {
+        baidu();
+        clickCnt ++;
+        siteMainDisappear();
+        console.log(searchHead);
+    });
+    gh.addEventListener("click", (e) => {
+        github();
+        clickCnt ++;
+        siteMainDisappear();
+        console.log(searchHead);
+    });
+
+};
 
 export {
     textInputEnable,
     enterToSearch,
     clickToSearch,
     bgcChange,
-    siteMain
+    siteMain,
+    searchSiteChoice
 }
