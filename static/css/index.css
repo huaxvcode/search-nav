@@ -67,20 +67,42 @@ div.searchBox div.icon {
 
 div.siteIcon {
     border-radius: 50% 0 0 50%;
+}
+
+div.siteIcon div.img {
     background-image: url(../image/必应.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-position-x: 13px;
     background-size: 40%;
 }
 
 div.searchIcon {
     border-radius: 0 50% 50% 0;
+}
+
+div.searchIcon div.img {
     background-image: url(../image/搜索.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-position-x: 11px;
     background-size: 35%;
+}
+
+div.icon::before {
+    content: "";
+    display: table;
+}
+
+div.icon div.img {
+    border-radius: 50% 50% 50% 50%;
+    width: calc(100% - 4px * 2);
+    height: calc(100% - 4px * 2);
+    margin: 4px;
+    /* background-color: #fff; */
+}
+
+div.icon div.img:hover {
+    background-color: #44413d;
+    transition-duration: 200ms;
 }
 
 div.textBox {
