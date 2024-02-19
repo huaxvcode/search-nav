@@ -51,14 +51,34 @@ let clickToSearch = function() {
     });
 }
 
+
+let siteMainDisappear = () => {
+    console.log("clickCnt = " + clickCnt);
+    let elem = document.querySelector("div.main");
+    if (clickCnt % 2 === 0) {
+        elem.setAttribute("style", "height: 0px;");
+    }
+    else {
+        elem.setAttribute("style", "height: 160px;");
+    }
+};
+
 let bgcChange = function() {
     let elem = document.querySelector("div.text");
     // 判断元素是否处于聚焦状态
     elem.addEventListener("focus", () => {
+        if (clickCnt % 2 == 1) {
+            clickCnt ++;
+            siteMainDisappear();
+        }
         let elem = document.querySelector("div.bgc");
         elem.setAttribute("style", "background-color: rgba(0, 0, 0, 0.3); backdrop-filter: blur(10px);");
     });
     elem.addEventListener("click", (e) => {
+        if (clickCnt % 2 == 1) {
+            clickCnt ++;
+            siteMainDisappear();
+        }
         e.stopPropagation(); // 停止事件向下冒泡
         let elem = document.querySelector("div.bgc");
         elem.setAttribute("style", "background-color: rgba(0, 0, 0, 0.3); backdrop-filter: blur(10px);");
@@ -72,16 +92,6 @@ let bgcChange = function() {
 
 let clickCnt = 0;
 
-let siteMainDisappear = () => {
-    console.log("clickCnt = " + clickCnt);
-    let elem = document.querySelector("div.main");
-    if (clickCnt % 2 === 0) {
-        elem.setAttribute("style", "height: 0px;");
-    }
-    else {
-        elem.setAttribute("style", "height: 160px;");
-    }
-};
 
 let siteMain = function() {
     let elem = document.querySelector("div.siteIcon");
