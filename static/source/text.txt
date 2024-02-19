@@ -1,0 +1,51 @@
+@media (min-width: 1000px) {
+    div.body {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        /* 使得子元素在主轴上对齐 */
+        justify-content: center;
+    
+        /* 使得子元素在交叉轴上对齐 */
+        /* align-items: center; */
+    
+        background-image: url(../image/丛雨壁纸.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    div.searchBox {
+        position: relative;
+        top: 200px;
+        height: 40px;
+        width: 500px;
+        display: flex;
+        
+    }
+}
+@media (max-width: 1000px) {
+    div.body {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        /* 使得子元素在主轴上对齐 */
+        justify-content: center;
+    
+        /* 使得子元素在交叉轴上对齐 */
+        align-items: center;
+    
+        background-image: url(../image/丛雨small.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    div.searchBox {
+        position: relative;
+        height: 40px;
+        width: 500px;
+        display: flex;
+        
+    }
+}

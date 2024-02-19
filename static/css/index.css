@@ -39,15 +39,16 @@
         justify-content: center;
     
         /* 使得子元素在交叉轴上对齐 */
-        align-items: center;
+        /* align-items: center; */
     
-        background-image: url(../image/丛雨small.png);
+        background-image: url(../image/丛雨small.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
     }
     div.searchBox {
         position: relative;
+        top: 33%;
         height: 40px;
         width: 500px;
         display: flex;
