@@ -76,7 +76,7 @@ let siteMain = function() {
         clickCnt ++;
         console.log("clickCnt = " + clickCnt);
         let elem = document.querySelector("div.main");
-        if (clickCnt % 2 === 0) {
+        if (clickCnt % 2 === 1) {
             elem.setAttribute("style", "height: 0px;");
         }
         else {
