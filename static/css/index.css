@@ -54,6 +54,7 @@
 }
 
 div.searchBox {
+    position: relative;
     height: 400px;
     /* background-color: red; */
     flex-wrap: wrap;
