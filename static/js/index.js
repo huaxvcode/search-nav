@@ -68,9 +68,27 @@ let bgcChange = function() {
     });
 }
 
+let clickCnt = 0;
+
+let siteMain = function() {
+    let elem = document.querySelector("div.siteIcon");
+    elem.addEventListener("click", (e) => {
+        clickCnt ++;
+        console.log("clickCnt = " + clickCnt);
+        let elem = document.querySelector("div.main");
+        if (clickCnt % 2 === 0) {
+            elem.setAttribute("style", "height: 0px;");
+        }
+        else {
+            elem.setAttribute("style", "height: 160px;");
+        }
+    });
+}
+
 export {
     textInputEnable,
     enterToSearch,
     clickToSearch,
-    bgcChange
+    bgcChange,
+    siteMain
 }

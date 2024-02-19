@@ -12,18 +12,35 @@
             <div class="bgc">
                 <div class="leftSpace space"></div>
                 <div class="searchBox">
-                    <div class="siteIcon icon">
+                    <div class="siteIcon icon searchItem">
                         <div class="img">
-                            
                         </div>
                     </div>
-                    <div class="textBox">
+                    <div class="textBox searchItem">
                         <div class="text">
                         </div>
                     </div>
-                    <div class="searchIcon icon">
+                    <div class="searchIcon icon searchItem">
                         <div class="img">
 
+                        </div>
+                    </div>
+                    <div class="main">
+                        <div class="mainItem mt1">
+                            <div class="googleIcon icon"></div>
+                            <div class="google siteName">谷歌</div>
+                        </div>
+                        <div class="mainItem mt2">
+                            <div class="bingIcon icon"></div>
+                            <div class="bing siteName">必应</div>
+                        </div>
+                        <div class="mainItem mt3">
+                            <div class="baiduIcon icon"></div>
+                            <div class="baidu siteName">百度</div>
+                        </div>
+                        <div class="mainItem mt4">
+                            <div class="githubIcon icon"></div>
+                            <div class="github siteName">Github</div>
                         </div>
                     </div>
                 </div>
@@ -34,12 +51,14 @@
                         textInputEnable,
                         enterToSearch,
                         clickToSearch,
-                        bgcChange
+                        bgcChange,
+                        siteMain
                     } from "./static/js/index.js";
                     textInputEnable();
                     enterToSearch();
                     clickToSearch();
                     bgcChange();
+                    siteMain();
                 </script>
             </div>
         </div>

@@ -46,12 +46,76 @@
         background-position: center;
     }
     div.searchBox {
-        position: relative;
         top: 33%;
         height: 40px;
         width: 500px;
         display: flex;
     }
+}
+
+div.searchBox {
+    height: 400px;
+    /* background-color: red; */
+    flex-wrap: wrap;
+    /* 设置自动换行时紧贴在一起 */
+    align-content: flex-start;
+}
+
+div.searchBox::before {
+    content: "";
+    display: table;
+}
+
+div.main {
+    margin-top: 5px;
+    height: 160px;
+    width: 150px;
+    border-radius: 12px;
+}
+
+div.main div {
+    color: aliceblue;
+}
+
+div.main div.mainItem {
+    display: flex;
+}
+
+div.mainItem div.siteName {
+    line-height: 40px;
+    text-align: center;
+    width: 70px;
+}
+
+div.main div.mainItem div.icon {
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+div.mainItem div.googleIcon {
+    background-image: url(../image/谷歌.png);
+}
+
+div.mainItem div.bingIcon {
+    background-image: url(../image/必应white.png);
+}
+
+div.mainItem div.baiduIcon {
+    background-image: url(../image/百度.png);
+}
+
+div.mainItem div.githubIcon {
+    background-image: url(../image/github.png);
+}
+
+div.mainItem::before {
+    content: "";
+    display: table;
 }
 
 div.bgc {
@@ -65,13 +129,16 @@ div.bgc {
     /* backdrop-filter: blur(18px); */
 }
 
-div.searchBox div {
+div.searchBox > div {
     background-color: black;
 }
 
 div.searchBox div.icon {
     width: 40px;
     height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 div.siteIcon {
@@ -114,6 +181,12 @@ div.icon div.img:hover {
     transition-duration: 200ms;
 }
 
+div.icon div.img:active {
+    width: calc(100% - 4px * 2 - 2px);
+    height: calc(100% - 4px * 2 - 2px);
+    transition-duration: 300ms;
+}
+
 div.textBox {
     background-color: black;
     width: calc(100% - 40px * 2 - 0px * 2);
@@ -148,4 +221,26 @@ div.space {
     top: 200px;
     height: 40px;
     width: 100px;
+}
+
+div.mainItem {
+    border-radius: 12px;
+}
+
+div.mainItem:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+div.searchBox > div {
+    position: relative;
+}
+
+div.main {
+    position: relative;
+    transition: height 200ms !important;
+    overflow: hidden;
+}
+
+div.searchItem {
+    z-index: 1;
 }
