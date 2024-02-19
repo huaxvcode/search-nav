@@ -9,35 +9,39 @@
     </head>
     <body>
         <div class="body">
-            <div class="leftSpace space"></div>
-            <div class="searchBox">
-                <div class="siteIcon icon">
-                    <div class="img">
-                        
+            <div class="bgc">
+                <div class="leftSpace space"></div>
+                <div class="searchBox">
+                    <div class="siteIcon icon">
+                        <div class="img">
+                            
+                        </div>
                     </div>
-                </div>
-                <div class="textBox">
-                    <div class="text">
+                    <div class="textBox">
+                        <div class="text">
+                        </div>
                     </div>
-                </div>
-                <div class="searchIcon icon">
-                    <div class="img">
+                    <div class="searchIcon icon">
+                        <div class="img">
 
+                        </div>
                     </div>
                 </div>
+                <div class="rightSpace space"></div>
+
+                <script type="module">
+                    import {
+                        textInputEnable,
+                        enterToSearch,
+                        clickToSearch,
+                        bgcChange
+                    } from "./static/js/index.js";
+                    textInputEnable();
+                    enterToSearch();
+                    clickToSearch();
+                    bgcChange();
+                </script>
             </div>
-            <div class="rightSpace space"></div>
-
-            <script type="module">
-                import {
-                    textInputEnable,
-                    enterToSearch,
-                    clickToSearch
-                } from "./static/js/index.js";
-                textInputEnable();
-                enterToSearch();
-                clickToSearch();
-            </script>
         </div>
     </body>
 </html>

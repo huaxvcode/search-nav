@@ -49,8 +49,28 @@ let clickToSearch = function() {
     });
 }
 
+let bgcChange = function() {
+    let elem = document.querySelector("div.text");
+    // 判断元素是否处于聚焦状态
+    elem.addEventListener("focus", () => {
+        let elem = document.querySelector("div.bgc");
+        elem.setAttribute("style", "background-color: rgba(0, 0, 0, 0.3); backdrop-filter: blur(18px);");
+    });
+    elem.addEventListener("click", (e) => {
+        e.stopPropagation(); // 停止事件向下冒泡
+        let elem = document.querySelector("div.bgc");
+        elem.setAttribute("style", "background-color: rgba(0, 0, 0, 0.3); backdrop-filter: blur(18px);");
+    });
+    let bgc = document.querySelector("div.bgc");
+    bgc.addEventListener("click", () => {
+        let elem = document.querySelector("div.bgc");
+        elem.setAttribute("style", "background-color: rgba(0, 0, 0, 0); backdrop-filter: none;");
+    });
+}
+
 export {
     textInputEnable,
     enterToSearch,
-    clickToSearch
+    clickToSearch,
+    bgcChange
 }
