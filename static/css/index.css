@@ -61,6 +61,8 @@ div.bgc {
     display: flex;
     justify-content: center;
     transition-duration: 120ms;
+    /* 对当前元素模糊效果 */
+    /* backdrop-filter: blur(18px); */
 }
 
 div.searchBox div {
